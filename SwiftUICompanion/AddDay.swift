@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct AddDay: View {
+    
+    @State var day: Int = 1
+    @State var learning: String = ""
+    @State var shipped: Bool = false
+    
     var body: some View {
-        
-        @State var day: Int = 1
-        @State var learning: String = ""
-        @State var shipped: Bool = false
-        
+
         NavigationView {
             Form {
                 
