@@ -16,11 +16,13 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(entries.entries) { entry in
-                    VStack(alignment: .leading) {
-                        Text(String(entry.day))
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Day \(String(entry.day))")
+                            .font(.headline)
                         Text(entry.learning)
                     }
                 }
+                .onDelete(perform: removeEntries)
             }
             .navigationTitle("Swift Learnings")
             .toolbar {
@@ -35,6 +37,11 @@ struct ContentView: View {
             }
         }
     }
+    
+    func removeEntries(at offsets: IndexSet) {
+        entries.entries.remove(atOffsets: offsets)
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
