@@ -8,10 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var entries = Entries()
+    @State private var showAddEntry = false
+    
     var body: some View {
         NavigationView {
             List {
-                Text("Day 1")
+                ForEach(entries.entries) { entry in
+                    VStack(alignment: .leading) {
+                        Text(String(entry.day))
+                        Text(entry.learning)
+                    }
+                }
+            }
+            .navigationTitle("Swift Learnings")
+            .toolbar {
+                Button {
+                    showAddEntry = true
+                } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAddEntry) {
+                AddDay(entries: entries)
             }
         }
     }
