@@ -13,12 +13,11 @@ struct AddDay: View {
     @State var learning: String = ""
     
     var body: some View {
-
+        
         NavigationView {
             Form {
                 
                 // Day
-                
                 Picker("Day", selection: $day) {
                     ForEach(1...100, id: \.self) {
                         Text(String($0))

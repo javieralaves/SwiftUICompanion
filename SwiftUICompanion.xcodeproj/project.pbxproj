@@ -12,6 +12,8 @@
 		5962D43F2A682D49009839A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5962D43E2A682D49009839A0 /* Assets.xcassets */; };
 		5962D4422A682D49009839A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5962D4412A682D49009839A0 /* Preview Assets.xcassets */; };
 		5962D44B2A682E2D009839A0 /* AddDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5962D44A2A682E2D009839A0 /* AddDay.swift */; };
+		5991741C2A69323E0064A8D0 /* DayEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991741B2A69323E0064A8D0 /* DayEntry.swift */; };
+		5991741E2A6932B80064A8D0 /* Entries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5991741D2A6932B80064A8D0 /* Entries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		5962D43E2A682D49009839A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5962D4412A682D49009839A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5962D44A2A682E2D009839A0 /* AddDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDay.swift; sourceTree = "<group>"; };
+		5991741B2A69323E0064A8D0 /* DayEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEntry.swift; sourceTree = "<group>"; };
+		5991741D2A6932B80064A8D0 /* Entries.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entries.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 				5962D43A2A682D48009839A0 /* SwiftUICompanionApp.swift */,
 				5962D43C2A682D48009839A0 /* ContentView.swift */,
 				5962D44A2A682E2D009839A0 /* AddDay.swift */,
+				5991741B2A69323E0064A8D0 /* DayEntry.swift */,
+				5991741D2A6932B80064A8D0 /* Entries.swift */,
 				5962D43E2A682D49009839A0 /* Assets.xcassets */,
 				5962D4402A682D49009839A0 /* Preview Content */,
 			);
@@ -141,6 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5962D44B2A682E2D009839A0 /* AddDay.swift in Sources */,
+				5991741C2A69323E0064A8D0 /* DayEntry.swift in Sources */,
+				5991741E2A6932B80064A8D0 /* Entries.swift in Sources */,
 				5962D43D2A682D48009839A0 /* ContentView.swift in Sources */,
 				5962D43B2A682D48009839A0 /* SwiftUICompanionApp.swift in Sources */,
 			);
