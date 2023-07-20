@@ -20,6 +20,7 @@ struct ContentView: View {
                         Text("Day \(String(entry.day))")
                             .font(.headline)
                         Text(entry.learning)
+                        Text(entry.feeling)
                     }
                 }
                 .onDelete(perform: removeEntries)
@@ -47,5 +48,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .preferredColorScheme(.dark)
     }
 }

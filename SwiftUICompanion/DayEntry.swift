@@ -11,4 +11,5 @@ struct DayEntry: Identifiable, Codable {
     var id = UUID()
     let day: Int
     let learning: String
+    let feeling: String
 }

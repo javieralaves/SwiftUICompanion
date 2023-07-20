@@ -15,6 +15,9 @@ struct AddDay: View {
     
     @State var day: Int = 1
     @State var learning: String = ""
+    @State var emoji: String = "🙂"
+    
+    let emojis: [String] = ["😭", "🥲", "🙂", "😄", "🥳"]
     
     var body: some View {
         
@@ -35,11 +38,21 @@ struct AddDay: View {
                         .lineLimit(5...10)
                 }
                 
+                // Feeling emoji
+                Section("I'm feeling") {
+                    Picker("Feeling", selection: $emoji) {
+                        ForEach(emojis, id: \.self) {
+                            Text($0)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+                }
+                
             }
             .navigationTitle("New learning")
             .toolbar {
                 Button("Save") {
-                    let entry = DayEntry(day: day, learning: learning)
+                    let entry = DayEntry(day: day, learning: learning, feeling: emoji)
                     entries.entries.append(entry)
                     dismiss()
                 }
