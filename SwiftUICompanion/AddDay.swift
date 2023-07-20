@@ -9,6 +9,10 @@ import SwiftUI
 
 struct AddDay: View {
     
+    @ObservedObject var entries: Entries
+    
+    @Environment(\.dismiss) var dismiss
+    
     @State var day: Int = 1
     @State var learning: String = ""
     
@@ -32,13 +36,20 @@ struct AddDay: View {
                 }
                 
             }
-            .navigationTitle("New date")
+            .navigationTitle("New learning")
+            .toolbar {
+                Button("Save") {
+                    let entry = DayEntry(day: day, learning: learning)
+                    entries.entries.append(entry)
+                    dismiss()
+                }
+            }
         }
     }
 }
 
 struct AddDay_Previews: PreviewProvider {
     static var previews: some View {
-        AddDay()
+        AddDay(entries: Entries())
     }
 }

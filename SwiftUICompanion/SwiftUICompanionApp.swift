@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUICompanionApp: App {
     var body: some Scene {
         WindowGroup {
-            AddDay()
+            ContentView()
         }
     }
 }
