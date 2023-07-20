@@ -11,7 +11,6 @@ struct AddDay: View {
     
     @State var day: Int = 1
     @State var learning: String = ""
-    @State var shipped: Bool = false
     
     var body: some View {
 
@@ -32,9 +31,6 @@ struct AddDay: View {
                     TextField("What have you learned?", text: $learning, axis: .vertical)
                         .lineLimit(5...10)
                 }
-                
-                // Shipped to Github?
-                Toggle("Pushed to GitHub", isOn: $shipped)
                 
             }
             .navigationTitle("New date")
